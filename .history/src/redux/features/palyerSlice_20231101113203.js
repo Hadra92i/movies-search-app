@@ -1,0 +1,18 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+
+const initialState = [];
+
+export const getAllPlars = createAsyncThunk("", async () => {
+
+});
+
+export const playerSlice = createSlice({
+    name : "player",
+    initialState,
+    reducers : {},
+    extraReducers : {
+
+    }
+});
+
+export default playerSlice.reducer;

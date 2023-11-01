@@ -1,0 +1,23 @@
+// eslint-disable-next-line no-unused-vars
+import axiosObj from "../http-common";
+
+export const getAllMovies = async () => {
+    try {
+      const response = await axiosObj.get('', {
+        params: {
+          s: '', // Empty string to fetch all movies
+        },
+      });
+  
+      return response.data.Search; // Assuming the response contains a 'Search' property
+    } catch (error) {
+      console.error('Error fetching all movies:', error);
+      return [];
+    }
+  };
+
+const MovieService = {
+    getAllMovies,
+};
+
+export default MovieService;
